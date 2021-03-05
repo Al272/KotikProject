@@ -19,7 +19,7 @@ public class Kotik {
         //dafault Kotik
         setPrettiness(1);
         setWeight(5);
-        setName("streetKotik");
+        setName("noName");
         setMeuw("meow");
         ++amountKotik;
     }
@@ -67,7 +67,7 @@ public class Kotik {
         return amountKotik;
     }
     public boolean wantEat(){
-        System.out.println("I want eat!!!");
+        System.out.print("I want eat!!!");
         return false;
     }
     public boolean sleep() {
@@ -111,11 +111,11 @@ public class Kotik {
                 return wantEat();
         }
         public void eat(int prettinessAmout){
-            System.out.println("Kotik eat");
+            System.out.println(" -> Kotik eat");
             setPrettiness(prettinessAmout);
         }
     public void eat(int prettinessAmout,String food){
-        System.out.println("Kotik eat "+food);
+        System.out.print(" -> Kotik eat "+food+"\n");
         setPrettiness(prettinessAmout);
     }
     public void eat(){
@@ -123,9 +123,9 @@ public class Kotik {
         eat(1,"kitiKat");
     }
     public void liveAnotherDay(){
-        for(int i=0; i<24; i++){
+        for(int i=1; i<25; i++){
+            System.out.print(i+" iteration -> ");
             int random = (int)(Math.random()*5)+1;
-            boolean condition = false;
             switch (random){
                 case 1 : if(!sleep())
                     eat();
